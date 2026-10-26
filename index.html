@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAMBO MALL & SHOPPING CENTRE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="main-header">
+        <img src="jambo.png" alt="Jambo Mall Logo" class="logo">
+        <h1>WELCOME TO JAMBO MALL & SHOPPING CENTRE</h1>
+    </header>
+
+    <main class="store-container">
+        <!-- Search-bar Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="What are you looking for?">
+                <button id="search-button">Search</button>
+            </div>
+            <p id="message"></p>
+        </section>
+
+        <div class="store-layout">
+            <!-- Left Column: Catalogue -->
+            <div class="catalogue-section">
+                <h2>Catalogue/Instore</h2>
+                <div id="catalogue-grid" class="product-grid"></div>
+            </div>
+
+            <!-- Right Column: Sidebar -->
+            <aside class="sidebar">
+
+                <!-- Recent searches with delete -->
+                <div class="recent-searches">
+                    <div class="panel-head">
+                        <h3>Recent Searches</h3>
+                        <button id="clear-history" class="link-btn" type="button">Clear all</button>
+                    </div>
+                    <ul id="search-list"></ul>
+                </div>
+
+                <!-- Cart + order form -->
+                <div class="items-in-cart">
+                    <h3>Items in Cart</h3>
+                    <div id="cart-list"></div>
+
+                    <form id="order-form" class="order-form hidden" novalidate>
+                        <h4>Order Details</h4>
+
+                        <label for="cust-name">Full name</label>
+                        <input type="text" id="cust-name" placeholder="e.g. Otieno Rolex" autocomplete="name">
+
+                        <label for="cust-phone">Phone number</label>
+                        <input type="tel" id="cust-phone" placeholder="e.g. 0712345678" autocomplete="tel">
+
+                        <label for="cust-address">Delivery address</label>
+                        <input type="text" id="cust-address" placeholder="Estate, street, landmark" autocomplete="street-address">
+
+                        <label for="cust-payment">Payment method</label>
+                        <select id="cust-payment">
+                            <option value="M-Pesa on delivery">M-Pesa on delivery</option>
+                            <option value="Cash on delivery">Cash on delivery</option>
+                            <option value="Card on delivery">Card on delivery</option>
+                        </select>
+
+                        <p id="order-error" class="order-error"></p>
+
+                        <div class="order-actions">
+                            <button type="submit" id="place-order">Place Order</button>
+                            <button type="button" id="cancel-checkout" class="secondary-btn">Back</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Delivery tracking -->
+                <div class="delivery">
+                    <h3>Delivery Details</h3>
+                    <p class="delivery-sub">Being Delivered by:</p>
+                    <div id="being-delivered-by" class="delivery-status">No active orders yet.</div>
+
+                    <div id="tracker" class="tracker hidden">
+                        <p class="tracker-line">Order <strong id="order-id"></strong></p>
+                        <div class="progress"><div id="progress-bar" class="progress-bar"></div></div>
+                        <p id="eta" class="tracker-line"></p>
+                        <ol id="timeline" class="timeline"></ol>
+                        <p id="last-updated" class="last-updated"></p>
+                        <button id="cancel-order" class="secondary-btn" type="button">Cancel order</button>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Contacts & Mails (Footer) -->
+    <footer class="footer-section">
+        <h2>Get in Touch For Customer Services Help</h2>
+        <div class="footer-info">
+            <p><strong>Contacts:</strong> <a href="tel:0745183180">0745183180</a></p>
+            <p><strong>Email:</strong> <a href="mailto:otieno.rolex@moringaschool.com">otieno.rolex@moringaschool.com</a></p>
+            <p><strong>Personal Mail:</strong> <a href="mailto:rolexkelly254@gmail.com">rolexkelly254@gmail.com</a></p>
+        </div>
+        <p class="copyright">Copyrights &amp; Licences &copy; 2026</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
